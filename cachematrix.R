@@ -31,4 +31,10 @@ cacheSolve <- function(x, ...) {
   x$set_mat_inverse(m_inverse)
   m_inverse
 
+
 }
+
+x = rbind(c(2, -4/7), c(-4/7, 2)) # Initialize matrix
+m = makeCacheMatrix(x) #pass matrix to function
+m$get()
+cacheSolve(m)   # Identify that inverse is available or not
